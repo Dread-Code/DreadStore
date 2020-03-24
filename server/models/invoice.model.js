@@ -13,6 +13,18 @@ let invoiceSchema = new Schema({
         type: Date,
         required: [true, 'La fecha es requerida']
     },
+<<<<<<< HEAD
+=======
+    products:{
+        type: [Schema.Types.ObjectId],
+        required: true,
+        autopopulate: true
+    },
+    subtotal:{  
+        type: Number,
+        required: true
+    },
+>>>>>>> b115de2ff73de6ed4f685f66bc83d071ea1dbb61
     iva:{
         type: Number,
         required: true
@@ -21,12 +33,15 @@ let invoiceSchema = new Schema({
         type: Number,
         required: true
     },
+<<<<<<< HEAD
     invoiceDetail:{
         type: Schema.Types.ObjectId,
         ref: '',
         required: true,
         autopopulate: true
     },
+=======
+>>>>>>> b115de2ff73de6ed4f685f66bc83d071ea1dbb61
     user:{
         type: Schema.Types.ObjectId,
         ref: 'User',

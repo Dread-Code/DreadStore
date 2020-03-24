@@ -27,6 +27,15 @@ let productSchema = new Schema({
         type: String,
         required: [true, 'Debe ingresar el url del producto']
     },
+<<<<<<< HEAD
+=======
+    warehouse:{
+        type: Schema.Types.ObjectId,
+        ref: "warehouse",
+        required: true,
+        autopopulate: true
+    },
+>>>>>>> b115de2ff73de6ed4f685f66bc83d071ea1dbb61
     user:{
         type: Schema.Types.ObjectId,
         ref: "User",
