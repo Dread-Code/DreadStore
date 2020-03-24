@@ -1,4 +1,4 @@
-
+    
     function index(req,res){
         return res.send({ message: 'Hello world'});
     }

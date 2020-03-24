@@ -11,18 +11,23 @@ let warehouseSchema = new Schema({
         type: String,
         required: [true, 'Ingrese la ubicacion de la bodega'],
     },
-    company:{
-        type: Schema.Types.ObjectId,
-        ref: 'Company',
-        required: true,
-        autopopulate: true
-    },
     user:{
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true,
         autopopulate: true
+    },
+    stores:{
+        type: [Schema.Types.ObjectId],
+        ref: 'Store',
+        autopopulate: true
+    },
+    products:{
+        type: [Schema.Types.ObjectId],
+        ref: 'Products',
+        autopopulate: true
     }
+    
 
 
 });

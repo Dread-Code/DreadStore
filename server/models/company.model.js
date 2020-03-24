@@ -15,12 +15,11 @@ let companySchema = new Schema({
     description:{
         type: String,
     },
-    Admin:[{
-        type: Schema.Types.ObjectId,
-        ref: "User",
-        required: true,
+    warehouse:{
+        type: [Schema.Types.ObjectId],
+        ref: 'Warehouse',
         autopopulate: true
-    }]
+    }
 });
 
 companySchema.plugin(require('mongoose-autopopulate'));

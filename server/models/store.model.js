@@ -12,9 +12,8 @@ let storeSchema = new Schema({
         required: [true, 'Se requiere la direccion de la sede']
     },
     user:{
-        type: Schema.Types.ObjectId,
+        type:[Schema.Types.ObjectId],
         ref: 'User',
-        required: true,
         autopopulate: true
     }
 
